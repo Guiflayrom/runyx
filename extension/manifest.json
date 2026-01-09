@@ -1,0 +1,68 @@
+{
+  "manifest_version": 3,
+  "name": "Runyx",
+  "version": "1.0.0",
+  "description": "This extension is able to be configured according to a payload sent by a http request",
+
+  "icons": {
+    "16": "media/logo.png",
+    "32": "media/logo.png",
+    "48": "media/logo.png",
+    "128": "media/logo.png"
+  },
+
+  "action": {
+    "default_title": "Runyx",
+    "default_icon": {
+      "16": "media/logo.png",
+      "32": "media/logo.png",
+      "48": "media/logo.png",
+      "128": "media/logo.png"
+    }
+  },
+
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+F"
+      }
+    }
+  },
+
+  "side_panel": {
+    "default_path": "ui.html"
+  },
+
+  "devtools_page": "devtools.html",
+
+  "permissions": ["cookies", "storage", "sidePanel", "scripting", "tabs", "activeTab", "downloads", "webNavigation"],
+  "host_permissions": ["<all_urls>"],
+
+  "background": {
+    "service_worker": "background.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';",
+    "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; object-src 'self';"
+  },
+
+  "sandbox": {
+    "pages": ["out/index.html", "eval-sandbox.html"]
+  },
+
+  "web_accessible_resources": [
+    {
+      "resources": ["out/**", "media/logo.png", "eval-sandbox.html"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

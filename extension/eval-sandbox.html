@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+  <body>
+    <script>
+      let processingId = null
+      self.addEventListener("message", async (e) => {
+        const d = e.data || {}
+        if (!d.__runyxEval) return
+        // lock per id; allow new ids
+        if (processingId === d.id) return
+        processingId = d.id || Math.random().toString(16).slice(2)
+
+        const send = (payload) => {
+          try {
+            e.source?.postMessage({ ...payload, __runyxEval: true, id: d.id }, "*")
+          } catch (err) {
+            // ignore
+          }
+        }
+        const wrapConsole = () => {
+          if (self.__runyxConsoleWrapped) return
+          self.__runyxConsoleWrapped = true
+          const origLog = console.log
+          console.log = (...args) => {
+            try {
+              send({ log: args.map((a) => (typeof a === "object" ? JSON.stringify(a) : String(a))).join(" ") })
+            } catch {}
+            return origLog.apply(console, args)
+          }
+        }
+
+        try {
+          let responded = false
+          const vars = d.vars || {}
+          // expose vars on global for convenience (alert(vars.foo))
+          try {
+            self.vars = vars
+          } catch {}
+          wrapConsole()
+          const argNames = (d.parsedArgs || []).map((a, i) => a.name || "arg" + (i + 1))
+          const argValues = (d.parsedArgs || []).map((a) => a.value)
+          let result
+
+          if (d.mode === "function") {
+            let fn = typeof self.main === "function" ? self.main : null
+            if (!fn) {
+              try {
+                eval(d.code)
+              } catch {
+                /* ignored */
+              }
+              fn = typeof self.main === "function" ? self.main : null
+            }
+            if (!fn) {
+              // try to interpret code as function expression
+              try {
+                const maybe = eval(`(${d.code})`)
+                if (typeof maybe === "function") {
+                  fn = maybe
+                }
+              } catch {
+                /* ignored */
+              }
+            }
+            if (!fn) {
+              // fallback: treat code as function body
+              fn = new Function(...argNames, d.code)
+            }
+            if (typeof fn !== "function") {
+              throw new Error("Function main not found")
+            }
+            result = await Promise.resolve(fn(...argValues))
+          } else {
+            // expression mode
+            const expr = new Function(...argNames, `return (${d.code});`)
+            result = await Promise.resolve(expr(...argValues))
+          }
+
+          if (!responded) {
+            responded = true
+            send({ ok: true, result })
+          }
+        } catch (err) {
+          send({ ok: false, error: err && err.message ? err.message : String(err) })
+        } finally {
+          processingId = null
+        }
+      })
+    </script>
+  </body>
+</html>

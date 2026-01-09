@@ -1,0 +1,816 @@
+{
+  "version": "1.0.0",
+  "exportedAt": 1767974510218,
+  "project": {
+    "createdAt": 1767704012606,
+    "description": "Default project with sample workflows",
+    "id": "proj-1",
+    "name": "My First Project",
+    "updatedAt": 1767974506242,
+    "workflowIds": [
+      "wf-1767974335800"
+    ]
+  },
+  "workflows": [
+    {
+      "id": "wf-1767974335800",
+      "name": "New Workflow",
+      "description": "New automation workflow",
+      "status": "idle",
+      "steps": [
+        {
+          "id": "step-1767974340796",
+          "type": "click",
+          "name": "Click Step",
+          "enabled": true,
+          "selector": "div:nth-of-type(1) > div > div:nth-of-type(1) > div:nth-of-type(1) > span",
+          "clickMode": "single",
+          "timeout": 5000,
+          "retries": 1,
+          "onFailure": "stop"
+        }
+      ],
+      "triggers": [
+        {
+          "id": "tr-1767974362942-4shvecz9f",
+          "name": "sss",
+          "type": "schedule",
+          "enabled": true,
+          "config": {
+            "mode": "everyMs",
+            "everyMinutes": 4,
+            "everyMs": 1000,
+            "dailyTime": "09:00",
+            "timezone": "local",
+            "jitterMs": 0,
+            "runIfBrowserClosed": false
+          },
+          "createdAt": 1767974362942
+        }
+      ],
+      "runs": [
+        {
+          "id": "run-1767974509306-e6wc6h",
+          "workflowId": "wf-1767974335800",
+          "status": "success",
+          "trigger": "schedule",
+          "startTime": 1767974509306,
+          "steps": [
+            {
+              "id": "step-1767974340796",
+              "name": "Click Step",
+              "status": "success",
+              "duration": "0.01s"
+            }
+          ],
+          "context": {
+            "url": "https://www.99freelas.com.br/dashboard",
+            "tabId": 747873958,
+            "variables": {}
+          },
+          "artifacts": [],
+          "endTime": 1767974509317,
+          "duration": "0.01s"
+        },
+        {
+          "id": "run-1767974508285-vf2rz4",
+          "workflowId": "wf-1767974335800",
+          "status": "success",
+          "trigger": "schedule",
+          "startTime": 1767974508285,
+          "steps": [
+            {
+              "id": "step-1767974340796",
+              "name": "Click Step",
+              "status": "success",
+              "duration": "0.01s"
+            }
+          ],
+          "context": {
+            "url": "https://www.99freelas.com.br/dashboard",
+            "tabId": 747873958,
+            "variables": {}
+          },
+          "artifacts": [],
+          "endTime": 1767974508300,
+          "duration": "0.01s"
+        },
+        {
+          "id": "run-1767974507252-c3jrpo",
+          "workflowId": "wf-1767974335800",
+          "status": "success",
+          "trigger": "schedule",
+          "startTime": 1767974507252,
+          "steps": [
+            {
+              "id": "step-1767974340796",
+              "name": "Click Step",
+              "status": "success",
+              "duration": "0.02s"
+            }
+          ],
+          "context": {
+            "url": "https://www.99freelas.com.br/dashboard",
+            "tabId": 747873958,
+            "variables": {}
+          },
+          "artifacts": [],
+          "endTime": 1767974507279,
+          "duration": "0.03s"
+        },
+        {
+          "id": "run-1767974505624-pcutty",
+          "workflowId": "wf-1767974335800",
+          "status": "success",
+          "trigger": "schedule",
+          "startTime": 1767974505624,
+          "steps": [
+            {
+              "id": "step-1767974340796",
+              "name": "Click Step",
+              "status": "success",
+              "duration": "0.01s"
+            }
+          ],
+          "context": {
+            "url": "https://www.99freelas.com.br/dashboard",
+            "tabId": 747873958,
+            "variables": {}
+          },
+          "artifacts": [],
+          "endTime": 1767974505647,
+          "duration": "0.02s"
+        },
+        {
+          "id": "run-1767974504099-nsw1s7",
+          "workflowId": "wf-1767974335800",
+          "status": "success",
+          "trigger": "schedule",
+          "startTime": 1767974504099,
+          "steps": [
+            {
+              "id": "step-1767974340796",
+              "name": "Click Step",
+              "status": "success",
+              "duration": "0.02s"
+            }
+          ],
+          "context": {
+            "url": "https://www.99freelas.com.br/dashboard",
+            "tabId": 747873958,
+            "variables": {}
+          },
+          "artifacts": [],
+          "endTime": 1767974504130,
+          "duration": "0.03s"
+        },
+        {
+          "id": "run-1767974502689-gnsfuq",
+          "workflowId": "wf-1767974335800",
+          "status": "success",
+          "trigger": "schedule",
+          "startTime": 1767974502689,
+          "steps": [
+            {
+              "id": "step-1767974340796",
+              "name": "Click Step",
+              "status": "success",
+              "duration": "0.02s"
+            }
+          ],
+          "context": {
+            "url": "https://www.99freelas.com.br/dashboard",
+            "tabId": 747873958,
+            "variables": {}
+          },
+          "artifacts": [],
+          "endTime": 1767974502721,
+          "duration": "0.03s"
+        },
+        {
+          "id": "run-1767974500910-wtcfa2",
+          "workflowId": "wf-1767974335800",
+          "status": "success",
+          "trigger": "schedule",
+          "startTime": 1767974500910,
+          "steps": [
+            {
+              "id": "step-1767974340796",
+              "name": "Click Step",
+              "status": "success",
+              "duration": "0.03s"
+            }
+          ],
+          "context": {
+            "url": "https://www.99freelas.com.br/dashboard",
+            "tabId": 747873958,
+            "variables": {}
+          },
+          "artifacts": [],
+          "endTime": 1767974500961,
+          "duration": "0.05s"
+        },
+        {
+          "id": "run-1767974499833-07a3xb",
+          "workflowId": "wf-1767974335800",
+          "status": "success",
+          "trigger": "schedule",
+          "startTime": 1767974499833,
+          "steps": [
+            {
+              "id": "step-1767974340796",
+              "name": "Click Step",
+              "status": "success",
+              "duration": "0.02s"
+            }
+          ],
+          "context": {
+            "url": "https://www.99freelas.com.br/dashboard",
+            "tabId": 747873958,
+            "variables": {}
+          },
+          "artifacts": [],
+          "endTime": 1767974499869,
+          "duration": "0.04s"
+        },
+        {
+          "id": "run-1767974498800-ppnji2",
+          "workflowId": "wf-1767974335800",
+          "status": "success",
+          "trigger": "schedule",
+          "startTime": 1767974498800,
+          "steps": [
+            {
+              "id": "step-1767974340796",
+              "name": "Click Step",
+              "status": "success",
+              "duration": "0.02s"
+            }
+          ],
+          "context": {
+            "url": "https://www.99freelas.com.br/dashboard",
+            "tabId": 747873958,
+            "variables": {}
+          },
+          "artifacts": [],
+          "endTime": 1767974498822,
+          "duration": "0.02s"
+        },
+        {
+          "id": "run-1767974497769-v76kno",
+          "workflowId": "wf-1767974335800",
+          "status": "success",
+          "trigger": "schedule",
+          "startTime": 1767974497769,
+          "steps": [
+            {
+              "id": "step-1767974340796",
+              "name": "Click Step",
+              "status": "success",
+              "duration": "0.02s"
+            }
+          ],
+          "context": {
+            "url": "https://www.99freelas.com.br/dashboard",
+            "tabId": 747873958,
+            "variables": {}
+          },
+          "artifacts": [],
+          "endTime": 1767974497795,
+          "duration": "0.03s"
+        },
+        {
+          "id": "run-1767974496738-c8vqha",
+          "workflowId": "wf-1767974335800",
+          "status": "success",
+          "trigger": "schedule",
+          "startTime": 1767974496738,
+          "steps": [
+            {
+              "id": "step-1767974340796",
+              "name": "Click Step",
+              "status": "success",
+              "duration": "0.02s"
+            }
+          ],
+          "context": {
+            "url": "https://www.99freelas.com.br/dashboard",
+            "tabId": 747873958,
+            "variables": {}
+          },
+          "artifacts": [],
+          "endTime": 1767974496760,
+          "duration": "0.02s"
+        },
+        {
+          "id": "run-1767974495700-tsqtmg",
+          "workflowId": "wf-1767974335800",
+          "status": "success",
+          "trigger": "schedule",
+          "startTime": 1767974495700,
+          "steps": [
+            {
+              "id": "step-1767974340796",
+              "name": "Click Step",
+              "status": "success",
+              "duration": "0.02s"
+            }
+          ],
+          "context": {
+            "url": "https://www.99freelas.com.br/dashboard",
+            "tabId": 747873958,
+            "variables": {}
+          },
+          "artifacts": [],
+          "endTime": 1767974495732,
+          "duration": "0.03s"
+        },
+        {
+          "id": "run-1767974494659-obiavf",
+          "workflowId": "wf-1767974335800",
+          "status": "success",
+          "trigger": "schedule",
+          "startTime": 1767974494659,
+          "steps": [
+            {
+              "id": "step-1767974340796",
+              "name": "Click Step",
+              "status": "success",
+              "duration": "0.02s"
+            }
+          ],
+          "context": {
+            "url": "https://www.99freelas.com.br/dashboard",
+            "tabId": 747873958,
+            "variables": {}
+          },
+          "artifacts": [],
+          "endTime": 1767974494694,
+          "duration": "0.04s"
+        },
+        {
+          "id": "run-1767974493613-orga57",
+          "workflowId": "wf-1767974335800",
+          "status": "success",
+          "trigger": "schedule",
+          "startTime": 1767974493613,
+          "steps": [
+            {
+              "id": "step-1767974340796",
+              "name": "Click Step",
+              "status": "success",
+              "duration": "0.02s"
+            }
+          ],
+          "context": {
+            "url": "https://www.99freelas.com.br/dashboard",
+            "tabId": 747873958,
+            "variables": {}
+          },
+          "artifacts": [],
+          "endTime": 1767974493647,
+          "duration": "0.03s"
+        },
+        {
+          "id": "run-1767974492576-jixjqa",
+          "workflowId": "wf-1767974335800",
+          "status": "success",
+          "trigger": "schedule",
+          "startTime": 1767974492576,
+          "steps": [
+            {
+              "id": "step-1767974340796",
+              "name": "Click Step",
+              "status": "success",
+              "duration": "0.02s"
+            }
+          ],
+          "context": {
+            "url": "https://www.99freelas.com.br/dashboard",
+            "tabId": 747873958,
+            "variables": {}
+          },
+          "artifacts": [],
+          "endTime": 1767974492604,
+          "duration": "0.03s"
+        },
+        {
+          "id": "run-1767974490580-basqa7",
+          "workflowId": "wf-1767974335800",
+          "status": "success",
+          "trigger": "schedule",
+          "startTime": 1767974490580,
+          "steps": [
+            {
+              "id": "step-1767974340796",
+              "name": "Click Step",
+              "status": "success",
+              "duration": "0.02s"
+            }
+          ],
+          "context": {
+            "url": "https://www.99freelas.com.br/dashboard",
+            "tabId": 747873958,
+            "variables": {}
+          },
+          "artifacts": [],
+          "endTime": 1767974490608,
+          "duration": "0.03s"
+        },
+        {
+          "id": "run-1767974489543-yq4yzu",
+          "workflowId": "wf-1767974335800",
+          "status": "success",
+          "trigger": "schedule",
+          "startTime": 1767974489543,
+          "steps": [
+            {
+              "id": "step-1767974340796",
+              "name": "Click Step",
+              "status": "success",
+              "duration": "0.02s"
+            }
+          ],
+          "context": {
+            "url": "https://www.99freelas.com.br/dashboard",
+            "tabId": 747873958,
+            "variables": {}
+          },
+          "artifacts": [],
+          "endTime": 1767974489572,
+          "duration": "0.03s"
+        },
+        {
+          "id": "run-1767974488485-vjbkpu",
+          "workflowId": "wf-1767974335800",
+          "status": "success",
+          "trigger": "schedule",
+          "startTime": 1767974488485,
+          "steps": [
+            {
+              "id": "step-1767974340796",
+              "name": "Click Step",
+              "status": "success",
+              "duration": "0.02s"
+            }
+          ],
+          "context": {
+            "url": "https://www.99freelas.com.br/dashboard",
+            "tabId": 747873958,
+            "variables": {}
+          },
+          "artifacts": [],
+          "endTime": 1767974488523,
+          "duration": "0.04s"
+        },
+        {
+          "id": "run-1767974487295-8jxnal",
+          "workflowId": "wf-1767974335800",
+          "status": "success",
+          "trigger": "schedule",
+          "startTime": 1767974487295,
+          "steps": [
+            {
+              "id": "step-1767974340796",
+              "name": "Click Step",
+              "status": "success",
+              "duration": "0.02s"
+            }
+          ],
+          "context": {
+            "url": "https://www.99freelas.com.br/dashboard",
+            "tabId": 747873958,
+            "variables": {}
+          },
+          "artifacts": [],
+          "endTime": 1767974487326,
+          "duration": "0.03s"
+        },
+        {
+          "id": "run-1767974486248-73pedd",
+          "workflowId": "wf-1767974335800",
+          "status": "success",
+          "trigger": "schedule",
+          "startTime": 1767974486248,
+          "steps": [
+            {
+              "id": "step-1767974340796",
+              "name": "Click Step",
+              "status": "success",
+              "duration": "0.02s"
+            }
+          ],
+          "context": {
+            "url": "https://www.99freelas.com.br/dashboard",
+            "tabId": 747873958,
+            "variables": {}
+          },
+          "artifacts": [],
+          "endTime": 1767974486279,
+          "duration": "0.03s"
+        },
+        {
+          "id": "run-1767974485198-xaf8ri",
+          "workflowId": "wf-1767974335800",
+          "status": "success",
+          "trigger": "schedule",
+          "startTime": 1767974485198,
+          "steps": [
+            {
+              "id": "step-1767974340796",
+              "name": "Click Step",
+              "status": "success",
+              "duration": "0.03s"
+            }
+          ],
+          "context": {
+            "url": "https://www.99freelas.com.br/dashboard",
+            "tabId": 747873958,
+            "variables": {}
+          },
+          "artifacts": [],
+          "endTime": 1767974485234,
+          "duration": "0.04s"
+        },
+        {
+          "id": "run-1767974484150-4n9ykj",
+          "workflowId": "wf-1767974335800",
+          "status": "success",
+          "trigger": "schedule",
+          "startTime": 1767974484150,
+          "steps": [
+            {
+              "id": "step-1767974340796",
+              "name": "Click Step",
+              "status": "success",
+              "duration": "0.03s"
+            }
+          ],
+          "context": {
+            "url": "https://www.99freelas.com.br/dashboard",
+            "tabId": 747873958,
+            "variables": {}
+          },
+          "artifacts": [],
+          "endTime": 1767974484187,
+          "duration": "0.04s"
+        },
+        {
+          "id": "run-1767974483104-7hwyqe",
+          "workflowId": "wf-1767974335800",
+          "status": "success",
+          "trigger": "schedule",
+          "startTime": 1767974483104,
+          "steps": [
+            {
+              "id": "step-1767974340796",
+              "name": "Click Step",
+              "status": "success",
+              "duration": "0.02s"
+            }
+          ],
+          "context": {
+            "url": "https://www.99freelas.com.br/dashboard",
+            "tabId": 747873958,
+            "variables": {}
+          },
+          "artifacts": [],
+          "endTime": 1767974483134,
+          "duration": "0.03s"
+        },
+        {
+          "id": "run-1767974446777-d7ns9j",
+          "workflowId": "wf-1767974335800",
+          "status": "success",
+          "trigger": "schedule",
+          "startTime": 1767974446777,
+          "steps": [
+            {
+              "id": "step-1767974340796",
+              "name": "Click Step",
+              "status": "success",
+              "duration": "0.02s"
+            }
+          ],
+          "context": {
+            "url": "https://www.99freelas.com.br/dashboard",
+            "tabId": 747873958,
+            "variables": {}
+          },
+          "artifacts": [],
+          "endTime": 1767974446810,
+          "duration": "0.03s"
+        },
+        {
+          "id": "run-1767974445716-lvosl4",
+          "workflowId": "wf-1767974335800",
+          "status": "success",
+          "trigger": "schedule",
+          "startTime": 1767974445716,
+          "steps": [
+            {
+              "id": "step-1767974340796",
+              "name": "Click Step",
+              "status": "success",
+              "duration": "0.03s"
+            }
+          ],
+          "context": {
+            "url": "https://www.99freelas.com.br/dashboard",
+            "tabId": 747873958,
+            "variables": {}
+          },
+          "artifacts": [],
+          "endTime": 1767974445753,
+          "duration": "0.04s"
+        },
+        {
+          "id": "run-1767974348130-9z8g5u",
+          "workflowId": "wf-1767974335800",
+          "status": "success",
+          "trigger": "manual",
+          "startTime": 1767974348130,
+          "steps": [
+            {
+              "id": "step-1767974340796",
+              "name": "Click Step",
+              "status": "success",
+              "duration": "0.01s"
+            }
+          ],
+          "context": {
+            "url": "https://www.99freelas.com.br/dashboard",
+            "tabId": 747873958,
+            "variables": {}
+          },
+          "artifacts": [],
+          "endTime": 1767974348151,
+          "duration": "0.02s"
+        },
+        {
+          "id": "run-1767974347728-4zmkz2",
+          "workflowId": "wf-1767974335800",
+          "status": "success",
+          "trigger": "manual",
+          "startTime": 1767974347728,
+          "steps": [
+            {
+              "id": "step-1767974340796",
+              "name": "Click Step",
+              "status": "success",
+              "duration": "0.01s"
+            }
+          ],
+          "context": {
+            "url": "https://www.99freelas.com.br/dashboard",
+            "tabId": 747873958,
+            "variables": {}
+          },
+          "artifacts": [],
+          "endTime": 1767974347750,
+          "duration": "0.02s"
+        },
+        {
+          "id": "run-1767974347352-6lkkbs",
+          "workflowId": "wf-1767974335800",
+          "status": "success",
+          "trigger": "manual",
+          "startTime": 1767974347352,
+          "steps": [
+            {
+              "id": "step-1767974340796",
+              "name": "Click Step",
+              "status": "success",
+              "duration": "0.01s"
+            }
+          ],
+          "context": {
+            "url": "https://www.99freelas.com.br/dashboard",
+            "tabId": 747873958,
+            "variables": {}
+          },
+          "artifacts": [],
+          "endTime": 1767974347372,
+          "duration": "0.02s"
+        },
+        {
+          "id": "run-1767974346796-12sw7k",
+          "workflowId": "wf-1767974335800",
+          "status": "success",
+          "trigger": "manual",
+          "startTime": 1767974346796,
+          "steps": [
+            {
+              "id": "step-1767974340796",
+              "name": "Click Step",
+              "status": "success",
+              "duration": "0.01s"
+            }
+          ],
+          "context": {
+            "url": "https://www.99freelas.com.br/dashboard",
+            "tabId": 747873958,
+            "variables": {}
+          },
+          "artifacts": [],
+          "endTime": 1767974346819,
+          "duration": "0.02s"
+        },
+        {
+          "id": "run-1767974346367-h39hto",
+          "workflowId": "wf-1767974335800",
+          "status": "success",
+          "trigger": "manual",
+          "startTime": 1767974346367,
+          "steps": [
+            {
+              "id": "step-1767974340796",
+              "name": "Click Step",
+              "status": "success",
+              "duration": "0.01s"
+            }
+          ],
+          "context": {
+            "url": "https://www.99freelas.com.br/dashboard",
+            "tabId": 747873958,
+            "variables": {}
+          },
+          "artifacts": [],
+          "endTime": 1767974346389,
+          "duration": "0.02s"
+        },
+        {
+          "id": "run-1767974346010-1j6n1d",
+          "workflowId": "wf-1767974335800",
+          "status": "success",
+          "trigger": "manual",
+          "startTime": 1767974346010,
+          "steps": [
+            {
+              "id": "step-1767974340796",
+              "name": "Click Step",
+              "status": "success",
+              "duration": "0.01s"
+            }
+          ],
+          "context": {
+            "url": "https://www.99freelas.com.br/dashboard",
+            "tabId": 747873958,
+            "variables": {}
+          },
+          "artifacts": [],
+          "endTime": 1767974346033,
+          "duration": "0.02s"
+        },
+        {
+          "id": "run-1767974345491-2njpkg",
+          "workflowId": "wf-1767974335800",
+          "status": "success",
+          "trigger": "manual",
+          "startTime": 1767974345491,
+          "steps": [
+            {
+              "id": "step-1767974340796",
+              "name": "Click Step",
+              "status": "success",
+              "duration": "0.01s"
+            }
+          ],
+          "context": {
+            "url": "https://www.99freelas.com.br/dashboard",
+            "tabId": 747873958,
+            "variables": {}
+          },
+          "artifacts": [],
+          "endTime": 1767974345519,
+          "duration": "0.03s"
+        }
+      ],
+      "settings": {
+        "allowedSites": [
+          {
+            "host": "https://www.99freelas.com.br/dashboard",
+            "favicon": "🌐"
+          }
+        ],
+        "wsEndpoint": "",
+        "wsConnected": false,
+        "wsConnectRequested": false,
+        "verboseLogging": false,
+        "allowCookies": false,
+        "allowStorage": false,
+        "maxRetries": 0,
+        "defaultTimeout": 5000,
+        "triggerPolicy": {
+          "mode": "single",
+          "parallelLimit": 2
+        }
+      },
+      "variables": {},
+      "runCount": 32,
+      "createdAt": 1767974335800,
+      "updatedAt": 1767974509317,
+      "lastRun": "Just now"
+    }
+  ]
+}
