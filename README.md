@@ -1,4 +1,12 @@
-﻿# Runyx Project Overview
+﻿<h1 align="center">Runyx Project Overview</h1>
+
+<p align="center">
+  <img src="https://github.com/Guiflayrom/runyx/blob/main/image/stepsreen.png" alt="Steps Screen" width="300" />
+  <br />
+  <em>An easy pattern to scrap for beginners and for low-hanging fruit automations.</em>
+</p>
+
+# Description
 
 This repository contains **Runyx**, a browser automation platform composed of a **Chromium extension** and a **local Python runtime** used for development, testing, and orchestration.
 
