@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "runyx"
-version = "1.0.2"
+version = "1.0.3"
 description = "Local bridge for Runyx extension"
 authors = ["Guiflayrom <guiflayrom@gmail.com>"]
 readme = "README.md"

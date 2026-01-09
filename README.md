@@ -6,8 +6,6 @@
   <em>An easy pattern to scrap for beginners and for low-hanging fruit automations.</em>
 </p>
 
-# Description
-
 This repository contains **Runyx**, a browser automation platform composed of a **Chromium extension** and a **local Python runtime** used for development, testing, and orchestration.
 
 At a high level:
